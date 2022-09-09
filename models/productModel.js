@@ -1,11 +1,6 @@
 import Mongoose from "mongoose";
 
 const productSchema = Mongoose.Schema({
-  restaurant: {
-    type: Mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "Resturant",
-  },
   name: {
     type: String,
     required: true,
@@ -33,6 +28,11 @@ const productSchema = Mongoose.Schema({
   image: {
     type: Buffer,
     required: true,
+  },
+  restaurant: {
+    type: Mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "Restaurant",
   },
 });
 

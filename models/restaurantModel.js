@@ -9,6 +9,11 @@ const restaurantSchema = Mongoose.Schema({
     type: String,
     required: true,
   },
+  products: {
+    type: Mongoose.Schema.Types.ObjectId,
+    required: false,
+    ref: "Product",
+  },
 });
 
 const Restaurant = Mongoose.model("Restaurant", restaurantSchema);
