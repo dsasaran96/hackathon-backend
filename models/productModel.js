@@ -1,6 +1,11 @@
 import Mongoose from "mongoose";
 
 const productSchema = Mongoose.Schema({
+  restaurant: {
+    type: Mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "Resturant",
+  },
   name: {
     type: String,
     required: true,
