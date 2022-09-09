@@ -5,6 +5,8 @@ import colors from "colors";
 
 import connectDB from './config/db.js';
 
+import userRoutes from './routes/userRoutes.js'
+
 dotenv.config();
 
 const app = express();
@@ -13,6 +15,9 @@ connectDB();
 
 app.use(express.json());
 app.use(cors());
+
+
+app.use("/api/user", userRoutes)
 
 const PORT = process.env.PORT || 8080;
 
