@@ -1,4 +1,4 @@
-import Restaurant from "../models/restaurantModel";
+import Restaurant from "../models/restaurantModel.js";
 import asyncHandler from "express-async-handler";
 
 export const createRestaurant = asyncHandler(async (req, res) => {

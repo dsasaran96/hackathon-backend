@@ -3,7 +3,7 @@ import {
   createRestaurant,
   getRestaurants,
 } from "../controllers/restaurantController.js";
-import { protect, admin } from "../middleware/authMiddleware";
+import { protect, admin } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
